@@ -1,4 +1,4 @@
-package com.example.helloworldironmen;
+package com.example.helloworldironmen.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.helloworldironmen.DetailActivity;
+import com.example.helloworldironmen.R;
+import com.example.helloworldironmen.model.HomeModel;
 
 import java.util.ArrayList;
 import java.util.List;

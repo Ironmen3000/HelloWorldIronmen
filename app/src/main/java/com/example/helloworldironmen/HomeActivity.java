@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.helloworldironmen.HomeAdapter;
-import com.example.helloworldironmen.HomeDataModel;
-import com.example.helloworldironmen.HomeModel;
+import com.example.helloworldironmen.adapter.HomeAdapter;
+import com.example.helloworldironmen.model.HomeDataModel;
+import com.example.helloworldironmen.model.HomeModel;
 
 import android.os.Bundle;
 
