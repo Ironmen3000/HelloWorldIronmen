@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.helloworldironmen.DetailActivity;
 import com.example.helloworldironmen.R;
-import com.example.helloworldironmen.model.HomeModel;
+import com.example.helloworldironmen.HomeModel;
 
 import java.util.ArrayList;
 import java.util.List;

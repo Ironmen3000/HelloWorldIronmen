@@ -1,4 +1,4 @@
-package com.example.helloworldironmen.model;
+package com.example.helloworldironmen;
 
 public class HomeModel {
     private String name;

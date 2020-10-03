@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.helloworldironmen.adapter.HomeAdapter;
-import com.example.helloworldironmen.model.HomeDataModel;
-import com.example.helloworldironmen.model.HomeModel;
 
 import java.util.ArrayList;
 import java.util.List;

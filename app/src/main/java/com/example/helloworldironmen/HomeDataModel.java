@@ -1,4 +1,4 @@
-package com.example.helloworldironmen.model;
+package com.example.helloworldironmen;
 
 import java.util.ArrayList;
 import java.util.List;
