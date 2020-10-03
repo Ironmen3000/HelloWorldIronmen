@@ -1,5 +1,7 @@
 package com.example.helloworldironmen;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,8 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.helloworldironmen.adapter.HomeAdapter;
 import com.example.helloworldironmen.model.HomeDataModel;
 import com.example.helloworldironmen.model.HomeModel;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
