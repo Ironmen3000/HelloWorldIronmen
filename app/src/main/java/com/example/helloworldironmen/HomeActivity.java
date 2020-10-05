@@ -1,6 +1,9 @@
 package com.example.helloworldironmen;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -39,6 +42,21 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initView() {
         rv = findViewById(R.id.home_id);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.action_about){
+            startActivity(new Intent(this, ProfilActivity.class));
+        }
+
+        return true;
     }
 }
 

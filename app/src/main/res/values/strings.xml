@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">Aplikasi Daftar Batik</string>
     <string name="title_activity_home_activty">HomeActivty</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Strings Profil Developer -->
+    <string name="profil">Profil</string>
+    <string name="title_profil_activity">Profil Developer</string>
+    <string name="developer">Developer</string>
+    <string name="nama">Nama</string>
+    <string name="ferizco_agni">Ferizco Agni Melenio</string>
+    <string name="jurusan">Jurusan</string>
+    <string name="mahasiswa_sistem_informasi">Mahasiswa Sistem Informasi</string>
+    <string name="m_agutri_dihan_prawira">M Agutri Dihan Prawira</string>
+    <string name="m_alfariz_abdilah">M Alfariz Abdilah</string>
+    <string name="m_naufal_syauqi">M Naufal Syauqi</string>
 </resources>
