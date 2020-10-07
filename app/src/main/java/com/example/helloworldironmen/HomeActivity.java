@@ -1,14 +1,15 @@
 package com.example.helloworldironmen;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.helloworldironmen.HomeAdapter;
-import com.example.helloworldironmen.HomeDataModel;
-import com.example.helloworldironmen.HomeModel;
-
-import android.os.Bundle;
+import androidx.recyclerview.widget.GridLayoutManager;
+import com.example.helloworldironmen.adapter.HomeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,11 @@ public class HomeActivity extends AppCompatActivity {
         homeModels = new ArrayList<>();
         homeAdapter = new HomeAdapter(this, homeModels);
 
+        int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+
+        rv.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
+
+
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(homeAdapter);
 
@@ -41,6 +47,21 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initView() {
         rv = findViewById(R.id.home_id);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.action_about){
+            startActivity(new Intent(this, ProfilActivity.class));
+        }
+
+        return true;
     }
 }
 

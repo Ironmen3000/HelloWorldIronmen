@@ -1,14 +1,14 @@
 package com.example.helloworldironmen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class activityfariz extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ProfilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activityfariz);
+        setContentView(R.layout.activity_profil);
     }
 }

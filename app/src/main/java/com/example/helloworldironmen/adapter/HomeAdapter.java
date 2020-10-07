@@ -1,4 +1,4 @@
-package com.example.helloworldironmen;
+package com.example.helloworldironmen.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.helloworldironmen.DetailActivity;
+import com.example.helloworldironmen.R;
+import com.example.helloworldironmen.HomeModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +69,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             tvNamaBarang = itemView.findViewById(R.id.tv_nama_barang);
             tvQty = itemView.findViewById(R.id.tv_qty);
             cvKlik = itemView.findViewById(R.id.cv_klik);
+
         }
     }
 }
