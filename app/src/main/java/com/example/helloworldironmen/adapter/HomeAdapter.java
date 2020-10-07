@@ -69,6 +69,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             tvNamaBarang = itemView.findViewById(R.id.tv_nama_barang);
             tvQty = itemView.findViewById(R.id.tv_qty);
             cvKlik = itemView.findViewById(R.id.cv_klik);
+
         }
     }
 }

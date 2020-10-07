@@ -13,4 +13,44 @@
     <string name="m_agutri_dihan_prawira">M Agutri Dihan Prawira</string>
     <string name="m_alfariz_abdilah">M Alfariz Abdilah</string>
     <string name="m_naufal_syauqi">M Naufal Syauqi</string>
+
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">info</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend
+        eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum
+        blandit, dolor diam fringilla tellus, eu euismod mauris neque
+        at neque.</string>
+
+    <string-array name="Batik_titles">
+        <item>sumatera</item>
+        <item>jawa</item>
+        <item>kalimantan</item>
+        <item>papua</item>
+        <item>bali</item>
+
+    </string-array>
+
+    <string-array name="Batik_info">
+        <item>batik sumatera!</item>
+        <item>batik jawa!</item>
+        <item>batik kalimantan!</item>
+        <item>batik papua!</item>
+        <item>batik bali!</item>
+
+    </string-array>
+
+
+    <array name="Batik_images">
+        <item>@drawable/sumatera</item>
+        <item>@drawable/jawa</item>
+        <item>@drawable/kalimantan</item>
+        <item>@drawable/papua</item>
+        <item>@drawable/bali</item>
+
+
+
+    </array>
 </resources>

@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.recyclerview.widget.GridLayoutManager;
 import com.example.helloworldironmen.adapter.HomeAdapter;
 
 import java.util.ArrayList;
@@ -27,6 +27,11 @@ public class HomeActivity extends AppCompatActivity {
         initView();
         homeModels = new ArrayList<>();
         homeAdapter = new HomeAdapter(this, homeModels);
+
+        int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+
+        rv.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
+
 
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(homeAdapter);
