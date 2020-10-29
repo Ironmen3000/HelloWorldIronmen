@@ -1,5 +1,6 @@
 package com.example.helloworldironmen;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -8,94 +9,78 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.helloworldironmen.model.HasilItem;
 
 import java.util.ArrayList;
 
-public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.ViewHolder>{
+public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.ViewHolder> {
 
-    private ArrayList<BatikModel> mBatikModel;
-    private Context mContext;
+    private ArrayList<HasilItem> hasilItems;
+    private Context context;
 
 
-    BatikAdapter(Context context, ArrayList<BatikModel>BatikModel) {
-        this.mBatikModel = BatikModel;
-        this.mContext = context;
+
+    public BatikAdapter(ArrayList<HasilItem> hasilItems, Context context){
+        this.hasilItems = hasilItems;
+        this.context = context;
     }
 
-
-
+    @NonNull
     @Override
-    public BatikAdapter.ViewHolder onCreateViewHolder(
-            ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).
-                inflate(R.layout.batik_list, parent, false));
+    public BatikAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+        return new ViewHolder(view);
     }
 
-
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(BatikAdapter.ViewHolder holder,
-                                 int position) {
-        // Get current sport.
-        BatikModel currentBatik = mBatikModel.get(position);
+    public void onBindViewHolder(@NonNull BatikAdapter.ViewHolder holder, final int position) {
+        holder.tvTitle.setText(hasilItems.get(position).getNamaBatik());
+        holder.tvPenjelasan.setText("Asal Daerah: " + hasilItems.get(position).getDaerahBatik());
+        Glide.with(context).load(hasilItems.get(position).getLinkBatik()).error(R.drawable.ic_launcher_background)
+                .override(512, 512)
+                .into(holder.iv);
 
-        // Populate the textviews with data.
-        holder.bindTo(currentBatik);
+       holder.cvKlik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("nama_batik", hasilItems.get(position).getNamaBatik());
+                intent.putExtra("makna_batik", hasilItems.get(position).getMaknaBatik());
+                intent.putExtra("link_batik", hasilItems.get(position).getLinkBatik());
+                intent.putExtra("daerah_batik", hasilItems.get(position).getDaerahBatik());
+                intent.putExtra("harga_rendah", hasilItems.get(position).getHargaRendah());
+                intent.putExtra("harga_tinggi", hasilItems.get(position).getHargaTinggi());
+                context.startActivity(intent);
+            }
+        });
     }
-
 
     @Override
     public int getItemCount() {
-        return mBatikModel.size();
+        return hasilItems.size();
     }
 
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private ImageView iv;
+        private TextView tvTitle;
+        private TextView tvPenjelasan;
+        private CardView cvKlik;
 
-    /**
-     * ViewHolder class that represents each row of data in the RecyclerView.
-     */
-    class ViewHolder extends RecyclerView.ViewHolder
-            implements View.OnClickListener{
-
-        // Member Variables for the TextViews
-        private TextView mTitleText;
-        private TextView mInfoText;
-        private ImageView mBatikImage;
-
-
-        ViewHolder(View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            // Initialize the views.
-            mTitleText = itemView.findViewById(R.id.title);
-            mInfoText = itemView.findViewById(R.id.subTitle);
-            mBatikImage = itemView.findViewById(R.id.BatikImage);
-
-            // Set the OnClickListener to the entire view.
-            itemView.setOnClickListener(this);
+            iv = itemView.findViewById(R.id.iv);
+            tvTitle = itemView.findViewById(R.id.tv_title);
+            tvPenjelasan = itemView.findViewById(R.id.tv_penjelasan);
+            cvKlik = itemView.findViewById(R.id.cv_klik);
         }
 
-        void bindTo(BatikModel currentBatik){
-            // Populate the textviews with data.
-            mTitleText.setText(currentBatik.getTitle());
-            mInfoText.setText(currentBatik.getInfo());
-
-            // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(
-                    currentBatik.getImageResource()).into(mBatikImage);
-        }
-
-
-        @Override
-        public void onClick(View view) {
-            BatikModel currentBatik = mBatikModel.get(getAdapterPosition());
-            Intent detailIntent = new Intent(mContext, DetailActivity.class);
-            detailIntent.putExtra("title", currentBatik.getTitle());
-            detailIntent.putExtra("image_resource",
-                    currentBatik.getImageResource());
-            mContext.startActivity(detailIntent);
-        }
     }
 
 

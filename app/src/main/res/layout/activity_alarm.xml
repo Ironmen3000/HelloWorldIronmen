@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alarm"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".Alarm">
+
+    <RadioGroup
+        android:id="@+id/AlarmGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdiNotification"
+            android:checked="true"
+            android:text="@string/set_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <RadioButton
+            android:id="@+id/rditoast"
+            android:text="@string/toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RadioGroup>
+
+    <Button
+        android:layout_below="@+id/AlarmGroup"
+        android:id="@+id/btnOneTime"
+        android:text="one-day alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:layout_below="@+id/btnOneTime"
+        android:id="@+id/btnRepeating"
+        android:text="@string/repeat_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+
+</RelativeLayout>
