@@ -8,7 +8,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="654dp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
@@ -16,7 +16,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
         android:background="#F2F2F2"
-        android:src="@drawable/aplikasi"
+        android:src="@drawable/logobatikfix"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="198dp" />
 

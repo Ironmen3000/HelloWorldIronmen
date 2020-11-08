@@ -1,5 +1,6 @@
 package com.example.helloworldironmen;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
     private int hargaRendah;
     private int hargaTinggi;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

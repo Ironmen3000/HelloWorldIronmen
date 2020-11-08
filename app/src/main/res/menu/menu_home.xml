@@ -9,4 +9,11 @@
         android:icon="@drawable/ic_action_profil"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/alarm"
+        android:orderInCategory="200"
+        android:title="@string/alarm"
+        android:icon="@drawable/ic_alarm"
+        app:showAsAction="always" />
+
 </menu>
