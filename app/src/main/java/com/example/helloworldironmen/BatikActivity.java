@@ -1,22 +1,16 @@
 package com.example.helloworldironmen;
 
 import android.app.AlarmManager;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -38,8 +32,8 @@ public class BatikActivity extends AppCompatActivity {
     private RecyclerView rv;
     private ArrayList<HasilItem> hasilItems;
     private BatikAdapter batikAdapter;
-    RadioButton rdiNotification,rdiToast;
-    Button btnOneTime,btnRepeating;
+    private RadioButton mrdiNotification,rdiToast;
+    private Button mbtnOneTime,mbtnRepeating;
 
 
     @Override
@@ -47,39 +41,35 @@ public class BatikActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_batik);
 
-        rdiNotification=(RadioButton)findViewById(R.id.rdiNotification);
-        rdiToast=(RadioButton)findViewById(R.id.rditoast);
-        btnOneTime = (Button) findViewById(R.id.btnOneTime);
-        btnRepeating = (Button) findViewById(R.id.btnRepeating);
-
-       /* btnOneTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (rdiNotification.isChecked())
-                    startAlarm(true, false);
-                else
-                    startAlarm(false, false);
-            }
-        });
-        btnRepeating.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(rdiNotification.isChecked())
-                    startAlarm(true,true);
-                else
-                    startAlarm(false,true);
-            }
-        });*/
-
-
-
-
-
-
-
+        mrdiNotification=(RadioButton)findViewById(R.id.rdiNotification);
+        rdiToast=(RadioButton) findViewById(R.id.rditoast);
+        mbtnOneTime = (Button) findViewById(R.id.btnOneTime);
+        mbtnRepeating = (Button) findViewById(R.id.btnRepeating);
 
         initView();
         getData();
+/*
+       mbtnOneTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mrdiNotification.isChecked()) {
+                    startAlarm(true, false);
+                } else
+                    startAlarm(false, false);
+            }
+        });
+
+        mbtnRepeating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mrdiNotification.isChecked()) {
+                    startAlarm(true,true);
+                } else
+                    startAlarm(false,true);
+            }
+        }); */
+
+
 
     }
 
