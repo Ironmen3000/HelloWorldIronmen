@@ -1,8 +1,5 @@
 package com.example.helloworldironmen;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +7,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -29,7 +29,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     finishAffinity();
                 }
-                startActivity(new Intent(getApplicationContext(), BatikActivity.class));
+                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
             }
         }, 8000);
 

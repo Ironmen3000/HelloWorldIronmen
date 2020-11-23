@@ -42,7 +42,7 @@ public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull BatikAdapter.ViewHolder holder, final int position) {
         holder.tvTitle.setText(hasilItems.get(position).getNamaBatik());
         holder.tvPenjelasan.setText("Asal Daerah: " + hasilItems.get(position).getDaerahBatik());
-        Glide.with(context).load(hasilItems.get(position).getLinkBatik()).error(R.drawable.ic_launcher_background)
+        Glide.with(context).load(hasilItems.get(position).getLinkBatik()).error(R.drawable.gambareror)
                 .override(512, 512)
                 .into(holder.iv);
 

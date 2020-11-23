@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/batikuu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Alarm"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".Alarm" />
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
@@ -35,10 +36,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BatikActivity" />
         </activity>
+        <activity android:name=".SejarahBatik"
+            android:parentActivityName=".MenuActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
 
-        <receiver
-            android:name=".AlarmNotification"/>
-        <receiver android:name=".AlarmToastReceiver"/>
+        <receiver android:name=".AlarmNotification" />
+        <receiver android:name=".AlarmToastReceiver" />
     </application>
 
 </manifest>

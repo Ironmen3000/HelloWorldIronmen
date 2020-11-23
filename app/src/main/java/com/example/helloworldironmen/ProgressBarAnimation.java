@@ -7,8 +7,6 @@ import android.view.animation.Transformation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.helloworldironmen.BatikActivity;
-
 public class ProgressBarAnimation extends Animation {
 
     private Context context;
@@ -33,7 +31,7 @@ public class ProgressBarAnimation extends Animation {
         textView.setText((int)value+" %");
 
         if (value == to){
-            context.startActivity(new Intent(context, BatikActivity.class));
+            context.startActivity(new Intent(context, MenuActivity.class));
         }
     }
 }
