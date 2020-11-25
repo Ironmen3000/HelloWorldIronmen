@@ -1,12 +1,8 @@
 package com.example.helloworldironmen;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -42,11 +38,6 @@ public class BatikActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_batik);
 
-        mrdiNotification=(RadioButton)findViewById(R.id.rdiNotification);
-        rdiToast=(RadioButton) findViewById(R.id.rditoast);
-        mbtnOneTime = (Button) findViewById(R.id.btnOneTime);
-        mbtnRepeating = (Button) findViewById(R.id.btnRepeating);
-
         initView();
         getData();
 /*
@@ -74,25 +65,6 @@ public class BatikActivity extends AppCompatActivity {
 
     }
 
-    private void startAlarm(boolean isNotification, boolean isRepeat) {
-        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent myIntent;
-        PendingIntent pendingIntent;
-
-        if (!isNotification) {
-                myIntent = new Intent(BatikActivity.this, AlarmToastReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
-        } else {
-            myIntent = new Intent(BatikActivity.this, AlarmNotification.class);
-            pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
-        }
-
-        if (!isRepeat)
-            manager.set(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 3000, pendingIntent);
-        else
-            manager.setRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 3000,3000, pendingIntent);
-
-    }
 
 
 
