@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,8 @@
         android:roundIcon="@mipmap/batikuu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Alarm"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".Alarm" />
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
@@ -26,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".ProfilActivity"
             android:label="@string/title_profil_activity"
@@ -36,10 +37,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BatikActivity" />
         </activity>
+        <activity android:name=".SejarahBatik"
+            android:parentActivityName=".MenuActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
 
-        <receiver
-            android:name=".AlarmNotification"/>
-        <receiver android:name=".AlarmToastReceiver"/>
+        <receiver android:name=".AlarmNotification"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+
+        </receiver>
     </application>
 
 </manifest>

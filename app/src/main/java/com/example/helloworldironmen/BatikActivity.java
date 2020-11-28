@@ -1,22 +1,14 @@
 package com.example.helloworldironmen;
 
-import android.app.AlarmManager;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -38,8 +30,14 @@ public class BatikActivity extends AppCompatActivity {
     private RecyclerView rv;
     private ArrayList<HasilItem> hasilItems;
     private BatikAdapter batikAdapter;
-    RadioButton rdiNotification,rdiToast;
-    Button btnOneTime,btnRepeating;
+    private RadioButton mrdiNotification,rdiToast;
+    private Button mbtnOneTime,mbtnRepeating;
+    // Shared preferences object
+    private SharedPreferences mPreferences;
+
+    // Name of shared preferences file
+    private String sharedPrefFile =
+            "com.example.android.hellosharedprefs";
 
 
     @Override
@@ -47,61 +45,37 @@ public class BatikActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_batik);
 
-        rdiNotification=(RadioButton)findViewById(R.id.rdiNotification);
-        rdiToast=(RadioButton)findViewById(R.id.rditoast);
-        btnOneTime = (Button) findViewById(R.id.btnOneTime);
-        btnRepeating = (Button) findViewById(R.id.btnRepeating);
+        initView();
+        getData();
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
-       /* btnOneTime.setOnClickListener(new View.OnClickListener() {
+
+
+/*
+       mbtnOneTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rdiNotification.isChecked())
+                if (mrdiNotification.isChecked()) {
                     startAlarm(true, false);
-                else
+                } else
                     startAlarm(false, false);
             }
         });
-        btnRepeating.setOnClickListener(new View.OnClickListener() {
+
+        mbtnRepeating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(rdiNotification.isChecked())
+                if(mrdiNotification.isChecked()) {
                     startAlarm(true,true);
-                else
+                } else
                     startAlarm(false,true);
             }
-        });*/
+        }); */
 
 
-
-
-
-
-
-
-        initView();
-        getData();
 
     }
 
-    private void startAlarm(boolean isNotification, boolean isRepeat) {
-        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent myIntent;
-        PendingIntent pendingIntent;
-
-        if (!isNotification) {
-                myIntent = new Intent(BatikActivity.this, AlarmToastReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
-        } else {
-            myIntent = new Intent(BatikActivity.this, AlarmNotification.class);
-            pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
-        }
-
-        if (!isRepeat)
-            manager.set(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 3000, pendingIntent);
-        else
-            manager.setRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 3000,3000, pendingIntent);
-
-    }
 
 
 
@@ -153,6 +127,21 @@ public class BatikActivity extends AppCompatActivity {
 
 
         return true;
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            finishAffinity();
+        }
+        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.apply();
     }
 
 
