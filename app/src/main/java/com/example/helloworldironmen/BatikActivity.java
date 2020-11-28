@@ -1,6 +1,7 @@
 package com.example.helloworldironmen;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,6 +32,12 @@ public class BatikActivity extends AppCompatActivity {
     private BatikAdapter batikAdapter;
     private RadioButton mrdiNotification,rdiToast;
     private Button mbtnOneTime,mbtnRepeating;
+    // Shared preferences object
+    private SharedPreferences mPreferences;
+
+    // Name of shared preferences file
+    private String sharedPrefFile =
+            "com.example.android.hellosharedprefs";
 
 
     @Override
@@ -40,6 +47,10 @@ public class BatikActivity extends AppCompatActivity {
 
         initView();
         getData();
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+
+
+
 /*
        mbtnOneTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,5 +136,13 @@ public class BatikActivity extends AppCompatActivity {
         }
         startActivity(new Intent(getApplicationContext(), MenuActivity.class));
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.apply();
+    }
+
 
 }
