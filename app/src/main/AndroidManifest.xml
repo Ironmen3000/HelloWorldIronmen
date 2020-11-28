@@ -45,7 +45,6 @@
         </activity>
 
         <receiver android:name=".AlarmNotification" />
-        <receiver android:name=".AlarmToastReceiver" />
     </application>
 
 </manifest>
