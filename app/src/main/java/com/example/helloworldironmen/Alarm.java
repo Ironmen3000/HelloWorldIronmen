@@ -67,13 +67,7 @@ public class Alarm extends AppCompatActivity implements TimePickerDialog.OnTimeS
 //        updateTimeText(c);
         startAlarm(c);
     }
- /*   private void updateTimeText(Calendar c) {
-        String timeText = "Alarm set for: ";
-        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
-        mTextView.setText(timeText);
-    }
 
-  */
 
 
     private void startAlarm(Calendar c) {
