@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background2"
+    android:background="@drawable/background8"
     tools:context="com.example.helloworldironmen.ProfilActivity">
 
 
@@ -170,7 +170,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ferizcoagni@gmail.com"
+                            android:text="agutridihan56@gmail.com"
                             android:layout_weight="1"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"/>
@@ -246,7 +246,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ferizcoagni@gmail.com"
+                            android:text="alfarizabdillahh22@gmail.com"
                             android:layout_weight="1"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"/>
@@ -257,15 +257,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
+                    android:layout_margin="20dp"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center_horizontal"
                     android:text="Ironmen Team"
                     android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:layout_margin="20dp"
-                    android:textSize="20dp"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/design_default_color_background"
+                    android:textSize="20dp" />
             </LinearLayout>
 
         </LinearLayout>
