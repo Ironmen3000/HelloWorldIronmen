@@ -6,12 +6,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SejarahBatik extends AppCompatActivity {
+public class tempatwisata extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sejarah_batik);
+        setContentView(R.layout.activity_tempat_wisata);
     }
 
     @Override

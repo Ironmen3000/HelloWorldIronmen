@@ -23,7 +23,7 @@ public class MenuActivity extends AppCompatActivity {
         cvSejarah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), SejarahBatik.class));
+                startActivity(new Intent(getApplicationContext(), tempatwisata.class));
             }
         });
 

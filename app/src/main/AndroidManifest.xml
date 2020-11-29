@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/batikuu"
+        android:icon="@mipmap/hotellll"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/batikuu"
+        android:roundIcon="@mipmap/hotellll"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MenuActivity" />
@@ -37,7 +37,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HotelActivity" />
         </activity>
-        <activity android:name=".SejarahBatik"
+        <activity android:name=".tempatwisata"
             android:parentActivityName=".MenuActivity"
             tools:targetApi="jelly_bean">
             <meta-data
