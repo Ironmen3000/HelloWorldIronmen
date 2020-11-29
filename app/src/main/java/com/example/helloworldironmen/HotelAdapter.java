@@ -14,53 +14,57 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.helloworldironmen.model.HasilItem;
+import com.example.helloworldironmen.model.HotelItem;
 
 import java.util.ArrayList;
 
-public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.ViewHolder> {
+public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> {
 
-    private ArrayList<HasilItem> hasilItems;
+    private ArrayList<HotelItem> hasilItems;
     private Context context;
 
 
 
-    public BatikAdapter(ArrayList<HasilItem> hasilItems, Context context){
+
+    public HotelAdapter(ArrayList<HotelItem> hasilItems, Context context){
         this.hasilItems = hasilItems;
         this.context = context;
     }
 
+
     @NonNull
     @Override
-    public BatikAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HotelAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         return new ViewHolder(view);
     }
 
+
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull BatikAdapter.ViewHolder holder, final int position) {
-        holder.tvTitle.setText(hasilItems.get(position).getNamaBatik());
-        holder.tvPenjelasan.setText("Asal Daerah: " + hasilItems.get(position).getDaerahBatik());
-        Glide.with(context).load(hasilItems.get(position).getLinkBatik()).error(R.drawable.gambareror)
+    public void onBindViewHolder(@NonNull HotelAdapter.ViewHolder holder, final int position) {
+        holder.tvTitle.setText(hasilItems.get(position).getNama());
+        holder.tvPenjelasan.setText("No Telepon: " + hasilItems.get(position).getNomorTelp());
+        Glide.with(context).load(hasilItems.get(position).getGambarUrl()).error(R.drawable.ic_launcher_background)
                 .override(512, 512)
                 .into(holder.iv);
 
-       holder.cvKlik.setOnClickListener(new View.OnClickListener() {
+        holder.cvKlik.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("nama_batik", hasilItems.get(position).getNamaBatik());
-                intent.putExtra("makna_batik", hasilItems.get(position).getMaknaBatik());
-                intent.putExtra("link_batik", hasilItems.get(position).getLinkBatik());
-                intent.putExtra("daerah_batik", hasilItems.get(position).getDaerahBatik());
-                intent.putExtra("harga_rendah", hasilItems.get(position).getHargaRendah());
-                intent.putExtra("harga_tinggi", hasilItems.get(position).getHargaTinggi());
+                intent.putExtra("nama_hotel", hasilItems.get(position).getNama());
+                intent.putExtra("nomor_telp", hasilItems.get(position).getNomorTelp());
+                intent.putExtra("alamat_hotel", hasilItems.get(position).getAlamat());
+                intent.putExtra("gambar_url", hasilItems.get(position).getGambarUrl());
+                intent.putExtra("koordinat", hasilItems.get(position).getKordinat());
                 context.startActivity(intent);
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

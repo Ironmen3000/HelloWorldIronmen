@@ -7,7 +7,7 @@ public class ApiConfig {
 
     public static ApiService getApiService(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://batikita.herokuapp.com/index.php/")
+                .baseUrl("https://dev.farizdotid.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
