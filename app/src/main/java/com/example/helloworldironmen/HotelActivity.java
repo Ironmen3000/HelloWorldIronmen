@@ -6,16 +6,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.helloworldironmen.model.HasilItem;
-import com.example.helloworldironmen.model.RootBatikModel;
+import com.example.helloworldironmen.model.HotelItem;
+import com.example.helloworldironmen.model.RootHotelModel;
 import com.example.helloworldironmen.rest.ApiConfig;
 import com.example.helloworldironmen.rest.ApiService;
 
@@ -25,13 +23,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BatikActivity extends AppCompatActivity {
+public class HotelActivity extends AppCompatActivity {
 
     private RecyclerView rv;
-    private ArrayList<HasilItem> hasilItems;
-    private BatikAdapter batikAdapter;
-    private RadioButton mrdiNotification,rdiToast;
-    private Button mbtnOneTime,mbtnRepeating;
+    private ArrayList<HotelItem> hasilItems;
+    private HotelAdapter hotelAdapter;
     // Shared preferences object
     private SharedPreferences mPreferences;
 
@@ -40,10 +36,11 @@ public class BatikActivity extends AppCompatActivity {
             "com.example.android.hellosharedprefs";
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_batik);
+        setContentView(R.layout.activity_hotel);
 
         initView();
         getData();
@@ -51,26 +48,7 @@ public class BatikActivity extends AppCompatActivity {
 
 
 
-/*
-       mbtnOneTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mrdiNotification.isChecked()) {
-                    startAlarm(true, false);
-                } else
-                    startAlarm(false, false);
-            }
-        });
 
-        mbtnRepeating.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(mrdiNotification.isChecked()) {
-                    startAlarm(true,true);
-                } else
-                    startAlarm(false,true);
-            }
-        }); */
 
 
 
@@ -83,21 +61,21 @@ public class BatikActivity extends AppCompatActivity {
     private void getData() {
         ApiService apiService = ApiConfig.getApiService();
         apiService.getData()
-                .enqueue(new Callback<RootBatikModel>() {
+                .enqueue(new Callback<RootHotelModel>() {
                     @Override
-                    public void onResponse(Call<RootBatikModel> call, Response<RootBatikModel> response) {
+                    public void onResponse(Call<RootHotelModel> call, Response<RootHotelModel> response) {
                         if(response.isSuccessful()){
-                            hasilItems = (ArrayList<HasilItem>) response.body().getHasil();
-                            batikAdapter = new BatikAdapter(hasilItems, getApplicationContext());
-                            batikAdapter.notifyDataSetChanged();
-                            rv.setAdapter(batikAdapter);
+                            hasilItems = (ArrayList<HotelItem>) response.body().getHotel();
+                            hotelAdapter = new HotelAdapter(hasilItems, getApplicationContext());
+                            hotelAdapter.notifyDataSetChanged();
+                            rv.setAdapter(hotelAdapter);
                             rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<RootBatikModel> call, Throwable t) {
-                        Toast.makeText(BatikActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    public void onFailure(Call<RootHotelModel> call, Throwable t) {
+                        Toast.makeText(HotelActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

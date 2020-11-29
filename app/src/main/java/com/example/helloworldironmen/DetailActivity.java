@@ -15,10 +15,7 @@ public class DetailActivity extends AppCompatActivity {
     private ImageView ivDetail;
     private TextView tvPenjelasan;
     private TextView tvDaerah;
-    private TextView tvaHargaRendah;
-    private TextView tvaHargaTinggi;
-    private int hargaRendah;
-    private int hargaTinggi;
+    private TextView tvTelepon;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -30,12 +27,11 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        getSupportActionBar().setTitle(getIntent().getStringExtra("nama_batik"));
-        tvPenjelasan.setText(getIntent().getStringExtra("makna_batik"));
-        tvDaerah.setText("Asal Daerah Batik: " + getIntent().getStringExtra( "daerah_batik"));
-        tvaHargaRendah.setText("Harga Terendah Batik: Rp  " + (getIntent().getIntExtra("harga_rendah", hargaRendah)));
-        tvaHargaTinggi.setText("Harga Tertinggi Batik: Rp  " + (getIntent().getIntExtra("harga_tinggi", hargaTinggi)));
-        Glide.with(getApplicationContext()).load(getIntent().getStringExtra("link_batik")).error(R.drawable.ic_launcher_background)
+        getSupportActionBar().setTitle(getIntent().getStringExtra("nama_hotel"));
+        tvPenjelasan.setText(getIntent().getStringExtra("alamat_hotel"));
+        tvTelepon.setText("Nomor Telepon: " + getIntent().getStringExtra("nomor_telp"));
+        tvDaerah.setText("Koordinat: " + getIntent().getStringExtra( "koordinat"));
+        Glide.with(getApplicationContext()).load(getIntent().getStringExtra("gambar_url")).error(R.drawable.ic_launcher_background)
                 .override(512, 512)
                 .into(ivDetail);
 
@@ -46,7 +42,8 @@ public class DetailActivity extends AppCompatActivity {
         ivDetail = findViewById(R.id.iv_detail);
         tvPenjelasan = findViewById(R.id.tv_penjelasan);
         tvDaerah = findViewById(R.id.tv_daerah);
-        tvaHargaRendah = findViewById(R.id.tv_hargarendah);
-        tvaHargaTinggi = findViewById(R.id.tv_hargatinggi);
+        tvTelepon = findViewById(R.id.tv_telepon);
+
+
     }
 }

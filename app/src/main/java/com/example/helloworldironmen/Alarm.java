@@ -20,7 +20,7 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Calendar;
 
-public class    Alarm extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class Alarm extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
     private static final int NOTIFICATION_ID = 0;
     TextView mTextView;
@@ -67,13 +67,7 @@ public class    Alarm extends AppCompatActivity implements TimePickerDialog.OnTi
 //        updateTimeText(c);
         startAlarm(c);
     }
- /*   private void updateTimeText(Calendar c) {
-        String timeText = "Alarm set for: ";
-        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
-        mTextView.setText(timeText);
-    }
 
-  */
 
 
     private void startAlarm(Calendar c) {
