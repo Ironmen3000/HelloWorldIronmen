@@ -7,8 +7,8 @@
     tools:context=".SplashScreenActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="654dp"
+        android:layout_width="2000dp"
+        android:layout_height="1000dp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
@@ -16,27 +16,9 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
         android:background="#F2F2F2"
-        android:src="@drawable/logobatikfix"
+        android:src="@drawable/logohoteal"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="198dp" />
+        tools:layout_editor_absoluteY="1500dp" />
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/progress_bar"
-        android:layout_centerHorizontal="true"
-
-
-
-        />
-
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/progress_bar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
 
 </RelativeLayout>

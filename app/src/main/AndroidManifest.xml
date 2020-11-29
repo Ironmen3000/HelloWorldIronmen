@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/batikuu"
+        android:icon="@mipmap/hotellll"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/batikuu"
+        android:roundIcon="@mipmap/hotellll"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MenuActivity" />

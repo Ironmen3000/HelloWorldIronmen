@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background9"
+    android:background="@drawable/putihh"
     tools:context=".MenuActivity">
 
     <ScrollView
@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/batiksejarah" />
+                        android:src="@drawable/wisata" />
 
                 </LinearLayout>
 
@@ -63,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/batiklist" />
+                    android:src="@drawable/dftrhotel" />
 
 
             </com.google.android.material.card.MaterialCardView>
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/devprofil" />
+                    android:src="@drawable/devpro" />
 
             </com.google.android.material.card.MaterialCardView>
 
