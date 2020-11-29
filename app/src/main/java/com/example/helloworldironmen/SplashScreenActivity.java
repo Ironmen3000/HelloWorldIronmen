@@ -31,22 +31,22 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }
                 startActivity(new Intent(getApplicationContext(), MenuActivity.class));
             }
-        }, 8000);
+        }, 1000);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        progressBar = findViewById(R.id.progress_bar);
+      /* progressBar = findViewById(R.id.progress_bar);
         textView = findViewById(R.id.text_view);
 
         progressBar.setMax(100);
         progressBar.setScaleY(3f);
 
-        progressAnimation();
+        progressAnimation();*/
     }
-    public void progressAnimation(){
+   /* public void progressAnimation(){
         ProgressBarAnimation anim = new ProgressBarAnimation(this, progressBar, textView, 0f, 100f);
         anim.setDuration(8000);
         progressBar.setAnimation(anim);
-    }
-    }
+    }*/
+}

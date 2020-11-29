@@ -32,9 +32,9 @@ public class AlarmNotification extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder
                 (context, PRIMARY_CHANNEL_ID)
-                .setSmallIcon(R.mipmap.batikuu)
-                .setContentTitle("Batiku")
-                .setContentText("Ayo Lihat Batiku Hari ini ^_^")
+                .setSmallIcon(R.mipmap.hotellll)
+                .setContentTitle("Hotelku")
+                .setContentText("Ayo Lihat Hotelku Hari ini ^_^")
                 .setContentIntent(contentPendingIntent)
                 .setContentIntent(contentPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background8"
+    android:background="@drawable/putihh"
     tools:context="com.example.helloworldironmen.ProfilActivity">
 
 
@@ -34,7 +34,7 @@
                 android:layout_margin="5dp"
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/colorPrimaryLight">
+                app:cardBackgroundColor="@color/colorPrimary">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
                 android:layout_margin="5dp"
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/colorPrimaryLight">
+                app:cardBackgroundColor="@color/colorPrimary">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
