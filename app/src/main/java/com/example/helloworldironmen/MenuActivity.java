@@ -10,8 +10,8 @@ import com.google.android.material.card.MaterialCardView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private MaterialCardView cvSejarah;
-    private MaterialCardView cvDaftarBatik;
+    private MaterialCardView cvTempatWisata;
+    private MaterialCardView cvDaftarHotel;
     private MaterialCardView cvProfil;
 
     @Override
@@ -20,14 +20,14 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         initView();
 
-        cvSejarah.setOnClickListener(new View.OnClickListener() {
+        cvTempatWisata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), tempatwisata.class));
             }
         });
 
-        cvDaftarBatik.setOnClickListener(new View.OnClickListener() {
+        cvDaftarHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), HotelActivity.class));
@@ -43,8 +43,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        cvSejarah = (MaterialCardView) findViewById(R.id.cv_sejarah);
-        cvDaftarBatik = (MaterialCardView) findViewById(R.id.cv_daftarbatik);
+        cvTempatWisata = (MaterialCardView) findViewById(R.id.cv_tempatwisata);
+        cvDaftarHotel = (MaterialCardView) findViewById(R.id.cv_daftarhotel);
         cvProfil = (MaterialCardView) findViewById(R.id.cv_profil);
     }
 }

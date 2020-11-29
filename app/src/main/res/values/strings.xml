@@ -33,7 +33,10 @@
     <string name="set_alarm">Set Alarm</string>
     <string name="toast">toast</string>
     <string name="repeat_alarm">repeat alarm</string>
-
-    
+    <string name="no_telepon">no telepon</string>
+    <string name="alamat">alamat</string>
+    <string name="koordinat">koordinat</string>
+    <string name="todo">TODO</string>
+    <string name="cancel_alarm">cancel alarm</string>
 
 </resources>

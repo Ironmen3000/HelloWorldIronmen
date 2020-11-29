@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scroll"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
@@ -14,25 +15,64 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:id="@+id/tv_penjelasan"
-            android:text="alamat"/>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:textColor="#09af00"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll"
+            tools:text="Nama"
+            android:layout_marginLeft="8dp" />
 
         <TextView
             android:id="@+id/tv_telepon"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="telepon"/>
+            android:layout_margin="8dp"
+            android:gravity="start"
+            android:textColor="#ef0078"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/scroll"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="No Telepon" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/tv_telepon" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:id="@+id/tv_daerah"
-            android:text="koordinat"/>
+            android:textSize="15sp"
+            android:id="@+id/tv_alamat"
+            android:text="@string/alamat"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_margin="16dp"
+            android:id="@+id/tv_koordinat"
+            android:text="@string/koordinat"
+            />
 
     </LinearLayout>
 

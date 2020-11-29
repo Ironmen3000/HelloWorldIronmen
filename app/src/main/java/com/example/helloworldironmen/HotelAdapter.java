@@ -44,7 +44,8 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull HotelAdapter.ViewHolder holder, final int position) {
         holder.tvTitle.setText(hasilItems.get(position).getNama());
-        holder.tvPenjelasan.setText("No Telepon: " + hasilItems.get(position).getNomorTelp());
+        holder.tvTelepon.setText("No Telepon: " + hasilItems.get(position).getNomorTelp());
+        holder.tvAlamat.setText(hasilItems.get(position).getAlamat());
         Glide.with(context).load(hasilItems.get(position).getGambarUrl()).error(R.drawable.ic_launcher_background)
                 .override(512, 512)
                 .into(holder.iv);
@@ -74,19 +75,19 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv;
         private TextView tvTitle;
-        private TextView tvPenjelasan;
+        private TextView tvTelepon;
+        private TextView tvAlamat;
         private CardView cvKlik;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.iv);
             tvTitle = itemView.findViewById(R.id.tv_title);
-            tvPenjelasan = itemView.findViewById(R.id.tv_penjelasan);
+            tvTelepon = itemView.findViewById(R.id.tv_telepon);
+            tvAlamat = itemView.findViewById(R.id.tv_alamat);
             cvKlik = itemView.findViewById(R.id.cv_klik);
         }
 
     }
-
-
 
 }

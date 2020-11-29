@@ -46,17 +46,7 @@ public class HotelActivity extends AppCompatActivity {
         getData();
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
-
-
-
-
-
-
     }
-
-
-
-
 
     private void getData() {
         ApiService apiService = ApiConfig.getApiService();
@@ -83,9 +73,6 @@ public class HotelActivity extends AppCompatActivity {
     private void initView() {
         rv = findViewById(R.id.rv);
     }
-
-
-
 
     // Action Bar
     @Override
@@ -121,6 +108,5 @@ public class HotelActivity extends AppCompatActivity {
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
         preferencesEditor.apply();
     }
-
 
 }

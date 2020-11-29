@@ -18,7 +18,8 @@
         android:background="#F2F2F2"
         android:src="@drawable/logohoteal"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1500dp" />
+        tools:layout_editor_absoluteY="1500dp"
+        android:contentDescription="@string/todo" />
 
 
 </RelativeLayout>
