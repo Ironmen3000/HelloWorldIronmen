@@ -17,25 +17,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:id="@+id/tv_penjelasan" />
+            android:id="@+id/tv_penjelasan"
+            android:text="alamat"/>
+
+        <TextView
+            android:id="@+id/tv_telepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="telepon"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:id="@+id/tv_daerah"/>
-
-        <TextView
-            android:id="@+id/tv_hargarendah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:id="@+id/tv_hargatinggi"/>
+            android:id="@+id/tv_daerah"
+            android:text="koordinat"/>
 
     </LinearLayout>
 
