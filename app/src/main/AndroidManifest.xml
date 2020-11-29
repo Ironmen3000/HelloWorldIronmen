@@ -20,7 +20,7 @@
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BatikActivity" />
+        <activity android:name=".HotelActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,11 +31,11 @@
         <activity
             android:name=".ProfilActivity"
             android:label="@string/title_profil_activity"
-            android:parentActivityName=".BatikActivity"
+            android:parentActivityName=".HotelActivity"
             tools:targetApi="jelly_bean">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".BatikActivity" />
+                android:value=".HotelActivity" />
         </activity>
         <activity android:name=".SejarahBatik"
             android:parentActivityName=".MenuActivity"

@@ -30,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         cvDaftarBatik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), BatikActivity.class));
+                startActivity(new Intent(getApplicationContext(), HotelActivity.class));
             }
         });
         cvProfil.setOnClickListener(new View.OnClickListener() {
