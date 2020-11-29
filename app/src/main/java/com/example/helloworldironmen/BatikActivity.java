@@ -51,26 +51,7 @@ public class BatikActivity extends AppCompatActivity {
 
 
 
-/*
-       mbtnOneTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mrdiNotification.isChecked()) {
-                    startAlarm(true, false);
-                } else
-                    startAlarm(false, false);
-            }
-        });
 
-        mbtnRepeating.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(mrdiNotification.isChecked()) {
-                    startAlarm(true,true);
-                } else
-                    startAlarm(false,true);
-            }
-        }); */
 
 
 
