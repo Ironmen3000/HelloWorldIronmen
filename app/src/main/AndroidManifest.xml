@@ -37,7 +37,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HotelActivity" />
         </activity>
-        <activity android:name=".SejarahBatik"
+        <activity android:name=".tempatwisata"
             android:parentActivityName=".MenuActivity"
             tools:targetApi="jelly_bean">
             <meta-data
