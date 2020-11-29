@@ -13,17 +13,20 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="195dp"
-        app:srcCompat="@drawable/wisata1" />
+        app:srcCompat="@drawable/wisata1"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="197dp"
-        app:srcCompat="@drawable/wisata2" />
+        app:srcCompat="@drawable/wisata2"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="195dp"
-        app:srcCompat="@drawable/wisata4" />
+        app:srcCompat="@drawable/wisata4"
+        android:contentDescription="@string/todo" />
 </LinearLayout>

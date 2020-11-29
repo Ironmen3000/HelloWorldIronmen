@@ -36,17 +36,5 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-      /* progressBar = findViewById(R.id.progress_bar);
-        textView = findViewById(R.id.text_view);
-
-        progressBar.setMax(100);
-        progressBar.setScaleY(3f);
-
-        progressAnimation();*/
     }
-   /* public void progressAnimation(){
-        ProgressBarAnimation anim = new ProgressBarAnimation(this, progressBar, textView, 0f, 100f);
-        anim.setDuration(8000);
-        progressBar.setAnimation(anim);
-    }*/
 }

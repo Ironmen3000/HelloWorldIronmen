@@ -26,7 +26,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
-                android:id="@+id/cv_sejarah"
+                android:id="@+id/cv_tempatwisata"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
 
@@ -53,7 +53,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="8dp"
-                android:id="@+id/cv_daftarbatik"
+                android:id="@+id/cv_daftarhotel"
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">

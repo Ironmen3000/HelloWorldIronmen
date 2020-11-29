@@ -11,7 +11,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -23,7 +22,6 @@ import java.util.Calendar;
 public class Alarm extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
     private static final int NOTIFICATION_ID = 0;
-    TextView mTextView;
     private NotificationManager mNotificationManager;
     public static final String channelID = "channelID";
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
